@@ -1,0 +1,42 @@
+
+   <app-skeleton-loader *ngIf="!loaded" [Cwidth]="400" [Cheight]="70" ></app-skeleton-loader>
+
+
+   <div *ngIf="loaded">
+    <h2 >Animated Accordion</h2>
+    
+    <p >Click on the buttons to open the collapsible content.</p>
+   </div>
+   
+
+   <app-skeleton-loader *ngIf="!loaded" [Cwidth]="1663" [Cheight]="53" ></app-skeleton-loader>
+   <app-skeleton-loader *ngIf="!loaded" [Cwidth]="1663" [Cheight]="53" ></app-skeleton-loader>
+   <app-skeleton-loader *ngIf="!loaded" [Cwidth]="1663" [Cheight]="53" ></app-skeleton-loader>
+   <app-skeleton-loader *ngIf="!loaded" [Cwidth]="1663" [Cheight]="53" ></app-skeleton-loader>
+   <div class="abc" *ngIf="loaded">
+    <button (click)="triggerChange($event)" class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button (click)="triggerChange($event)" class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <button  (click)="triggerChange($event)" class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <button  (click)="triggerSecondChange($event)" class="accordion"
+    [ngClass]="status ? 'active' : 'accordion'"
+    
+    >Section 3</button>
+    <div class="panel" [ngClass]="status? 'panelactive':'panel'">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+
+   </div>
+   

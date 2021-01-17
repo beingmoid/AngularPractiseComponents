@@ -1,0 +1,34 @@
+button{
+    border: none;
+    color:white;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 14px;   
+}
+.btn-primary{
+    background-color: #263D6A;
+    width: 178px;
+    height: 48px;
+}
+.btn-primary:hover{
+    background-color: #32508A; 
+}
+.btn-primary:focus{
+    background-color: #284887;
+    outline:0;
+}
+.btn-primary:disabled{
+    background-color: #808DA7;
+}
+.btn-secondary{
+    background-color: #262B6A;
+    width: 178px;
+    height: 48px;
+}
+.btn-secondary:hover{
+    background-color: #2B3287;
+}
+.btn-secondary:focus{
+    background-color: #26316A;
+    outline: none;
+}

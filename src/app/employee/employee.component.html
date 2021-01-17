@@ -1,0 +1,74 @@
+
+<!-- <div *ngFor="let item of markshhet">
+<p> Student Id: {{item.StId}}</p>
+<p>  Student Name:{{item.StName}}</p>
+<p> Percentage :{{item.Percentage}}</p>
+<div *ngFor="let num of item.subject">
+    <p>{{num.SubId}}</p>
+    <p>{{num.SubName}}</p>
+    <p>{{num.MarksObtained}}</p>
+    <p>{{num.TotalMarks}}</p>
+
+</div>
+
+
+</div> -->
+
+<!-- Team -->
+<section id="team" class="pb-5">
+    <div class="container">
+        <h5 class="section-title h1">eMPLOYEE SHEET</h5>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let item of emp">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{{item.EmpImage}}" alt="card image"></p>
+                                    <h4 class="card-title">{{item.EmpName}}</h4>
+                                    <p class="card-text"><b>Hourly Rate: </b>{{item.Rate}} /Hrs</p>
+                                    <p class="card-text"><b>Total Earninig: </b>{{item.Rate * item.TotalHours | currency: 'USD'}}</p>
+                                    <p class="card-text"><b>Total experience: </b>{{item.TotalHours}} Hrs</p>
+                                    <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title">Employee Sheet</h4>
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Work Name</th>
+                                            <th scope="col">Work Hours </th>
+                                            <th scope="col">Status</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let work of item.EmpWork; index as i">
+                                            <th scope="row">{{i}}</th>
+                                            <td>{{work.WorkName}}</td>
+                                            <td>{{work.WorkHours}}  </td>
+                                            <td>{{work.WorkStatus ? 'Done':'OnGoing'}}</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+       
+    
+
+
+        </div>
+    </div>
+</section>
+<!-- Team -->

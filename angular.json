@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "practiceali"
+    }
+  },
+  "defaultProject": "practiceali",
+  "cli": {
+    "analytics": false
+  }
 }

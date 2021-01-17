@@ -1,0 +1,28 @@
+
+
+<div class="container">
+<div class="row">
+    <div class="card col-xs-12 col-sm-6 col-md-4" style="width: 18rem;" *ngFor="let item of product | sort:[sortField,sortDirection]">
+        <img class="card-img-top" src="{{item.ProductImage}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="color: red;">{{item.ProducPrice}}</h5>
+          <h6 class="card-title">{{item.ProductName}}</h6>
+          <p class="card-text" style="font-size: 12px; color: lightgray;">{{item.ProductDescription}}</p>
+          <a href="#" class="btn btn-primary d-flex justify-content-center" style="background: orange;">Add to Card</a>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<select name="filter" id="filtersData" (change)="this.SortSelection($event)">
+    <option value=""></option>
+    <option  value="1">High to Low</option>
+    <option value="2"> Low to High </option>
+  </select>
+
+
+
+
+
+
